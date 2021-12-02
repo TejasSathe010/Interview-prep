@@ -1,2 +1,8 @@
-int max = getMax(arr, size);
-    // cout << max << endl;
+while(i<j) {
+    //     int temp=arr[i];
+    //     arr[i] = arr[j];
+    //     arr[j] = temp;
+
+    //     i++;
+    //     j++;
+    // }
