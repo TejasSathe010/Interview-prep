@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+//Time Complexity: O(n)
+// Space Complexity: O(1)
+
 int peakElement(int arr[], int n) {
     if(n == 1) return arr[0];
     if(arr[0] >= arr[1]) {

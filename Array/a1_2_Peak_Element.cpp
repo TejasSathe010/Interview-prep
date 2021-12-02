@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+//Time Complexity: O(logn)
+// Space Complexity: O(1)
+
 int getPeakElement(int arr[], int start, int end, int size) {
     int mid = start+(end - start) / 2;
 
