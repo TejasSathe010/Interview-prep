@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ipynb": "ipython",
+        "unordered_map": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
