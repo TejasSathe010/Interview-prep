@@ -2,7 +2,8 @@
     "files.associations": {
         "*.ipynb": "ipython",
         "unordered_map": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
