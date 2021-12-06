@@ -59,40 +59,17 @@ class LinkedList {
         cout << "NULL" << endl;
     }
 
-    int findLength() {
-        int length = 0;
-        Node* temp = head;
-        while(temp != NULL) {
-            temp = temp->next;
-            length++;
-        }
-        return length;
-    }
-
-    int findMiddleUsingLength() {
-        int length = findLength();
-        int count = 0;
-        int middle = 0;
-        Node* temp = head;
-        while(temp != NULL) {
-            if(count == (length/2)) {
-                middle = (temp->data);
-            }
-            temp = temp->next;
-            count++;
-        }
-        return middle;
-    }
-
-    int findMiddleFastPtrSlowPtr() {
+    void deleteMiddleNode() {
         Node *slowPtr = head;
         Node *fastPtr = head;
-
+        Node *prev = NULL;
         while(fastPtr != NULL && fastPtr->next != NULL) {
-            slowPtr = slowPtr->next;
             fastPtr = fastPtr->next->next;
+            prev = slowPtr;
+            slowPtr = slowPtr->next;
         }
-        return slowPtr->data;
+
+        prev->next = slowPtr->next;
     }
 };
 
@@ -110,8 +87,7 @@ int main() {
     ll.prepend(1);
     ll.prepend(2);
     ll.printList();
+    ll.deleteMiddleNode();
+    ll.printList();
 
-    // cout << ll.findLength() << endl;
-    // cout << ll.findMiddleUsingLength() << endl;
-    cout << ll.findMiddleFastPtrSlowPtr() << endl;
 }
