@@ -11,15 +11,18 @@ void sortArrays(int arr[], int size) {
             swap(arr[l], arr[m]);
             l++;
             m++;
+            continue;
         }
 
         if(arr[m] == 1) {
             m++;
+            continue;
         }
 
         if(arr[m] == 2) {
             swap(arr[m], arr[h]);
             h--;
+            continue;
         }
     }
 
