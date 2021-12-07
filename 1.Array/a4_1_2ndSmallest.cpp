@@ -7,6 +7,12 @@ int secondSmallest(int arr[], int size) {
     int secondSmallest = INT_MAX;
 
     for(int i = 0; i < size; i++) {
+
+        if(size == 1) {
+            small = secondSmallest = arr[0];
+            break;
+        }
+
         if(arr[i] < small) {
             small = arr[i];
         }
