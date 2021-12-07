@@ -9,7 +9,7 @@ int findDuplicateFloyds(int arr[], int size) {
         slowPtr = arr[slowPtr];
         fastPtr = arr[arr[fastPtr]];
     }while(slowPtr != fastPtr);
-    
+
     fastPtr = arr[0];
     while(fastPtr != slowPtr) {
         slowPtr = arr[slowPtr];
