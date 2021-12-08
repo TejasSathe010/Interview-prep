@@ -14,8 +14,13 @@ void unionArray(int arr1[], int arr2[], int size1, int size2) {
     for(int i = 0; i < size2; i++) {
         mp[arr2[i]]++;
     }
+    
+    // unordered_map<int, int>::iterator itr;
+    // for(itr = mp.begin(); itr != mp.end(); itr++) {
+    //     cout << itr->first << " " << itr->second << endl;
+    // }
 
-    cout << mp.size();
+    cout << mp.size() << endl;
 }
 
 
