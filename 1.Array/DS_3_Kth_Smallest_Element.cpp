@@ -8,7 +8,7 @@ int findKthSmallest(int arr[], int size, int k) {
     for(int i = 0; i < size; i++) {
         p_queue.push(arr[i]);
     }
-    int ans=0, i=0;
+    int ans=0, i=1;
     while(!p_queue.empty()) {
         if(i==k) {
             ans = p_queue.top();
