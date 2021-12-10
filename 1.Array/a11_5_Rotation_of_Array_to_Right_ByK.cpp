@@ -14,6 +14,7 @@ void reverse(int arr[], int start, int end) {
 
 void rotationByK(int arr[], int size, int k) {
   // To Right
+  k = k%size;
   reverse(arr, 0, size-1);
   reverse(arr, 0, k-1);
   reverse(arr, k, size-1);
@@ -50,6 +51,7 @@ int main()
 
 // void rotationByK(int arr[], int size, int k) {
 //   // To Left
+     // k = k%size;
 //   reverse(arr, 0, size-1);
 //   reverse(arr, 0, size-k-1);
 //   reverse(arr, size-k, size-1);
