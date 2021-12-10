@@ -2,6 +2,8 @@
 using namespace std;
 
 // Time Complexity: O(m+n)
+// For Unsorted array, use SET. or array containing duplicate use SET.
+// For Union and Itersection as well use SET.
 
 void unionArray(int arr1[], int arr2[], int size1, int size2) {
     int i=0, j=0;
