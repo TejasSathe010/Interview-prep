@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void nearestSmallerToRight(int arr[], int size) {
+(int arr[], int size) {
     vector<int> v;
     stack<int> s;
 
@@ -44,4 +44,4 @@ int main() {
     return 0;
 }
 
--1 2 -1 -1
+// -1 2 -1 -1

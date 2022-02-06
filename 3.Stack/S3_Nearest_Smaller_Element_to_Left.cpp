@@ -35,11 +35,11 @@ void nearestSmallerToLeft(int arr[], int size) {
 
 int main() {
 
-    int arr[] = {1, 3, 2, 4};
+    int arr[] = {4, 5, 2, 10, 8};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     nearestSmallerToLeft(arr, size);
     return 0;
 }
 
-// -1 1 1 2
+// -1 4 -1 2 2
