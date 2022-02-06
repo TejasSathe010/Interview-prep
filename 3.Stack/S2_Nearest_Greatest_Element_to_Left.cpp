@@ -1,22 +1,23 @@
 #include <iostream>
 #include <stack>
 #include <vector>
-#include <algorithm>
+
 using namespace std;
 
-void nearestGreat(int arr[], int size) {
-    stack<int> s;
+void nearestGreaterToLeft(int arr[], int size) {
     vector<int> v;
-    
-    for(int i=size-1; i>=0; i--) {
+    stack<int> s;
+
+    for(int i = 0; i < size; i++) {
         if(s.empty()) {
             v.push_back(-1);
         } else if(!s.empty() && s.top() > arr[i]) {
-                v.push_back(s.top());
+            v.push_back(s.top());
         } else {
             while(!s.empty() && s.top() <= arr[i]) {
                 s.pop();
             }
+
             if(s.empty()) {
                 v.push_back(-1);
             } else {
@@ -25,18 +26,22 @@ void nearestGreat(int arr[], int size) {
         }
         s.push(arr[i]);
     }
-    reverse(v.begin(), v.end());
     vector<int>::iterator itr;
     for(itr=v.begin(); itr!=v.end(); itr++) {
         cout << *itr << " ";
     }
 }
 
+
+
 int main() {
 
     int arr[] = {1, 3, 2, 4};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    nearestGreat(arr, size);
+    nearestGreaterToLeft(arr, size);
     return 0;
 }
+
+// I/p → 1 3 2 4 
+// o/p → -1 -1 3 -1 
