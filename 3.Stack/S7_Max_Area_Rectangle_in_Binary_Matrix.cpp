@@ -76,7 +76,6 @@ int MAH(int arr[], int size) {
 }
 
 int maxAreaRect(int arr[4][4], int m, int n) {
-    vector<int> v;
     for(int i = 0; i < n; i++) {
         v.push_back(arr[0][i]);
     }
