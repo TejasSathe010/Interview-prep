@@ -8,7 +8,7 @@ using namespace std;
 
 
 int main() {
-    string str = "";
+    string str;
     int n_ops;
     cin >> n_ops;
     for(int i=0; i<n_ops; i++) {
@@ -18,7 +18,7 @@ int main() {
         case 1:
             {
                 string inp;
-                getline(cin, inp);
+                cin >> inp;
                 stk.push(str);
                 str.append(inp);
             }
@@ -28,14 +28,14 @@ int main() {
                 int inp;
                 cin >> inp;
                 stk.push(str);
-                str.erase(str.end()-1-inp, str.end());
+                str.erase(str.size()-inp);
             }
             break;
         case 3:
             {
                 int inp;
                 cin >> inp;
-                cout << str[inp] << endl;
+                cout << str[inp-1] << endl;
             }
             break;
         case 4:
